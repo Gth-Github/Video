@@ -1,0 +1,19 @@
+package com.mooc.biz;
+
+import java.util.List;
+
+import javax.servlet.http.HttpServletRequest;
+
+import com.mooc.entity.Course;
+
+public interface CourseBiz {
+	public List<Course> selectAllCourse();
+	Course selectByPrimaryKey(int id);
+    int updateByPrimaryKeySelective(Course record);
+    List<Course> coursesearch(String search);
+    List<Course> freeCourse();
+    List<Course> vipCourse();
+    public List<Course> netCourse();
+    int deleteByPrimaryKey(String id);
+    int savecourse(HttpServletRequest req);
+}
